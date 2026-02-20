@@ -1225,4 +1225,721 @@
             }
         }
 
-        @
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .floating-card {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .features-grid,
+            .categories-grid,
+            .charts-grid,
+            .testimonials-grid,
+            .screenshots-grid,
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-highlight {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .cta-features {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <span class="logo-text">Uang<span>KuY</span></span>
+            </a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#fitur" class="nav-link">Fitur</a></li>
+                <li><a href="#kategori" class="nav-link">Kategori</a></li>
+                <li><a href="#statistik" class="nav-link">Statistik</a></li>
+                <li><a href="#cara-pakai" class="nav-link">Cara Pakai</a></li>
+                <li><a href="#screenshot" class="nav-link">Screenshot</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="privacy-policy.html" class="nav-link">Privasi</a></li>
+                <li><a href="terms-of-use.html" class="nav-link">Syarat</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i> 100% Offline & Gratis
+                </div>
+                
+                <h1 class="hero-title">
+                    Kelola <span>Keuangan Pribadi</span> dengan Mudah
+                </h1>
+                
+                <p class="hero-description">
+                    UangKuY membantu Anda mencatat setiap pemasukan dan pengeluaran harian. 
+                    Pantau kondisi keuangan, lihat statistik, dan kendalikan pengeluaran 
+                    dengan antarmuka yang bersih dan intuitif.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-large">
+                        <i class="fab fa-google-play"></i> Download di Play Store
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        <i class="fas fa-play"></i> Lihat Demo
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label">Kategori</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Jenis Grafik</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Offline</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="phone-mockup">
+                    <div class="mockup-screen">
+                        <div class="mockup-header">
+                            <div class="mockup-header-dot"></div>
+                            <div class="mockup-header-dot"></div>
+                            <div class="mockup-header-dot"></div>
+                        </div>
+                        
+                        <div class="mockup-content">
+                            <div class="mockup-balance">
+                                <div class="mockup-balance-label">Total Saldo</div>
+                                <div class="mockup-balance-value">Rp 2.350.000</div>
+                            </div>
+                            
+                            <div class="mockup-stats">
+                                <div class="mockup-stat">
+                                    <div class="mockup-stat-label">Pemasukan</div>
+                                    <div class="mockup-stat-value income">Rp 5.250.000</div>
+                                </div>
+                                <div class="mockup-stat">
+                                    <div class="mockup-stat-label">Pengeluaran</div>
+                                    <div class="mockup-stat-value expense">Rp 2.900.000</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mockup-transactions">
+                                <div class="mockup-transaction-item">
+                                    <div class="mockup-transaction-icon" style="background: #f97316;">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <div class="mockup-transaction-details">
+                                        <div class="mockup-transaction-category">Makanan</div>
+                                        <div class="mockup-transaction-date">Hari ini, 12:30</div>
+                                    </div>
+                                    <div class="mockup-transaction-amount negative">-Rp 45.000</div>
+                                </div>
+                                
+                                <div class="mockup-transaction-item">
+                                    <div class="mockup-transaction-icon" style="background: #3b82f6;">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="mockup-transaction-details">
+                                        <div class="mockup-transaction-category">Transportasi</div>
+                                        <div class="mockup-transaction-date">Kemarin, 08:15</div>
+                                    </div>
+                                    <div class="mockup-transaction-amount negative">-Rp 20.000</div>
+                                </div>
+                                
+                                <div class="mockup-transaction-item">
+                                    <div class="mockup-transaction-icon" style="background: #22c55e;">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="mockup-transaction-details">
+                                        <div class="mockup-transaction-category">Gaji</div>
+                                        <div class="mockup-transaction-date">5 Mar 2026</div>
+                                    </div>
+                                    <div class="mockup-transaction-amount positive">+Rp 4.200.000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="floating-card floating-card-1">
+                    <i class="fas fa-arrow-up" style="color: #10b981;"></i>
+                    <span>Pemasukan +Rp 5,2jt</span>
+                </div>
+                
+                <div class="floating-card floating-card-2">
+                    <i class="fas fa-arrow-down" style="color: #ef4444;"></i>
+                    <span>Pengeluaran -Rp 2,9jt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features" id="fitur">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FITUR LENGKAP</span>
+                <h2>Semua yang Anda Butuhkan untuk Mengelola Keuangan</h2>
+                <p>Dari mencatat transaksi hingga menganalisis pengeluaran, UangKuY menyediakan fitur lengkap dalam satu aplikasi.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>Catat Transaksi</h3>
+                    <p>Tambahkan pemasukan dan pengeluaran dengan cepat. Pilih tanggal, kategori, dan tambahkan catatan.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 9 Kategori tersedia</li>
+                        <li><i class="fas fa-check"></i> Pilih tanggal transaksi</li>
+                        <li><i class="fas fa-check"></i> Tambahkan catatan</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>9 Kategori Transaksi</h3>
+                    <p>Lengkapi pencatatan dengan kategori yang sesuai. Setiap kategori punya icon dan warna berbeda.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Makanan, Transportasi, Belanja</li>
+                        <li><i class="fas fa-check"></i> Hiburan, Kesehatan, Pendidikan</li>
+                        <li><i class="fas fa-check"></i> Tagihan, Gaji, Lainnya</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Dashboard Lengkap</h3>
+                    <p>Lihat total saldo, profit bulan ini, ringkasan pemasukan & pengeluaran, dan 5 transaksi terbaru.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>3 Jenis Grafik</h3>
+                    <p>Bar Chart, Pie Chart, dan Line Chart. Filter per bulan, tahun, atau semua waktu.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <h3>Filter & Pencarian</h3>
+                    <p>Filter: Semua, Pemasukan, Pengeluaran, Hari ini, Bulan ini. Cari berdasarkan kategori atau catatan.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon"><i class="fas fa-file-export"></i></div>
+                    <h3>Backup CSV</h3>
+                    <p>Ekspor semua transaksi ke file CSV. Bisa dibuka di Excel atau Google Sheets.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Dark Mode</h3>
+                    <p>Toggle antara tema terang dan gelap untuk kenyamanan mata.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature-icon"><i class="fas fa-user-edit"></i></div>
+                    <h3>Edit Profil</h3>
+                    <p>Ubah nama pengguna sesuai keinginan Anda.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>100% Offline</h3>
+                    <p>Semua data tersimpan di perangkat Anda. Privasi terjaga, tidak perlu koneksi internet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories" id="kategori">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">KATEGORI TRANSAKSI</span>
+                <h2>9 Kategori Lengkap dengan Icon Berwarna</h2>
+                <p>Setiap kategori memiliki icon dan warna berbeda untuk memudahkan identifikasi</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="category-icon" style="background: #f97316;"><i class="fas fa-utensils"></i></div>
+                    <div class="category-info">
+                        <h4>Makanan</h4>
+                        <p>Rp 45.000 • Hari ini</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="50">
+                    <div class="category-icon" style="background: #3b82f6;"><i class="fas fa-car"></i></div>
+                    <div class="category-info">
+                        <h4>Transportasi</h4>
+                        <p>Rp 20.000 • Kemarin</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-icon" style="background: #a855f7;"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="category-info">
+                        <h4>Belanja</h4>
+                        <p>Rp 150.000 • 3 hari lalu</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="category-icon" style="background: #ef4444;"><i class="fas fa-film"></i></div>
+                    <div class="category-info">
+                        <h4>Hiburan</h4>
+                        <p>Rp 75.000 • Minggu lalu</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-icon" style="background: #22c55e;"><i class="fas fa-hospital"></i></div>
+                    <div class="category-info">
+                        <h4>Kesehatan</h4>
+                        <p>Rp 50.000 • 5 Mar 2026</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="category-icon" style="background: #8b5a2b;"><i class="fas fa-school"></i></div>
+                    <div class="category-info">
+                        <h4>Pendidikan</h4>
+                        <p>Rp 200.000 • 1 Mar 2026</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon" style="background: #14b8a6;"><i class="fas fa-receipt"></i></div>
+                    <div class="category-info">
+                        <h4>Tagihan</h4>
+                        <p>Rp 500.000 • 1 Mar 2026</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon" style="background: #22c55e;"><i class="fas fa-briefcase"></i></div>
+                    <div class="category-info">
+                        <h4>Gaji</h4>
+                        <p>Rp 4.200.000 • 5 Mar 2026</p>
+                    </div>
+                </div>
+                
+                <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon" style="background: #6b7280;"><i class="fas fa-ellipsis-h"></i></div>
+                    <div class="category-info">
+                        <h4>Lainnya</h4>
+                        <p>Rp 25.000 • 2 Mar 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section statistics" id="statistik">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">3 JENIS GRAFIK</span>
+                <h2>Analisis Keuangan Lebih Mudah</h2>
+                <p>Lihat laporan keuangan dengan berbagai tampilan grafik untuk analisis yang lebih baik</p>
+            </div>
+            
+            <div class="charts-grid">
+                <div class="chart-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="chart-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h4>Bar Chart</h4>
+                    <p>Perbandingan pemasukan dan pengeluaran per kategori atau per periode</p>
+                </div>
+                
+                <div class="chart-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="chart-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h4>Pie Chart</h4>
+                    <p>Distribusi pengeluaran berdasarkan kategori</p>
+                </div>
+                
+                <div class="chart-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="chart-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Line Chart</h4>
+                    <p>Tren keuangan bulanan selama setahun</p>
+                </div>
+            </div>
+            
+            <div class="stats-highlight" data-aos="fade-up">
+                <div class="highlight-item">
+                    <div class="highlight-label">Filter Periode</div>
+                    <div class="highlight-value">Bulan • Tahun • Semua</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-label">Top Pengeluaran</div>
+                    <div class="highlight-value">5 Kategori Teratas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works" id="cara-pakai">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">MUDAH DIGUNAKAN</span>
+                <h2>Cara Menggunakan UangKuY</h2>
+                <p>Hanya 3 langkah sederhana untuk mulai mencatat keuangan</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-download"></i></div>
+                    <h3>Download Aplikasi</h3>
+                    <p>Download UangKuY dari Google Play Store. Gratis dan ukuran kecil (~8MB).</p>
+                </div>
+                
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Buat Profil</h3>
+                    <p>Masukkan nama Anda (opsional) dan siap menggunakan aplikasi.</p>
+                </div>
+                
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-pen"></i></div>
+                    <h3>Catat Transaksi</h3>
+                    <p>Mulai catat pemasukan dan pengeluaran harian Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section screenshots" id="screenshot">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">TAMPILAN APLIKASI</span>
+                <h2>Lihat Langsung Tampilan UangKuY</h2>
+                <p>Antarmuka sederhana dan intuitif, cocok untuk semua kalangan</p>
+            </div>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="screenshot-frame">
+                        <img src="images/beranda.jpg" alt="Dashboard UangKuY" onerror="this.src='https://via.placeholder.com/250x500/2E7D32/ffffff?text=Beranda'">
+                    </div>
+                    <p>Halaman Beranda</p>
+                </div>
+                
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="screenshot-frame">
+                        <img src="images/transaksi.jpg" alt="Daftar Transaksi" onerror="this.src='https://via.placeholder.com/250x500/388E3C/ffffff?text=Transaksi'">
+                    </div>
+                    <p>Daftar Transaksi</p>
+                </div>
+                
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="screenshot-frame">
+                        <img src="images/tambah.jpg" alt="Tambah Transaksi" onerror="this.src='https://via.placeholder.com/250x500/4CAF50/ffffff?text=Tambah'">
+                    </div>
+                    <p>Tambah Transaksi</p>
+                </div>
+                
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="screenshot-frame">
+                        <img src="images/statistik.jpg" alt="Halaman Statistik" onerror="this.src='https://via.placeholder.com/250x500/1B5E20/ffffff?text=Statistik'">
+                    </div>
+                    <p>Halaman Statistik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">TESTIMONIAL</span>
+                <h2>Apa Kata Pengguna UangKuY</h2>
+                <p>Pengalaman nyata dari pengguna yang sudah merasakan kemudahan mencatat keuangan</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">"Aplikasi ini sangat membantu saya mengelola keuangan. UI nya enak dipandang dan mudah digunakan."</p>
+                    <div class="testimonial-author">Andrean</div>
+                    <div class="testimonial-role">Mahasiswa</div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">"Fitur backup ke CSV sangat membantu. Saya bisa menganalisis pengeluaran di Excel dengan mudah."</p>
+                    <div class="testimonial-author">Sarah</div>
+                    <div class="testimonial-role">Karyawan</div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">"Akhirnya nemu aplikasi catatan keuangan yang sederhana dan ga ribet. Dark mode-nya enak buat malam hari."</p>
+                    <div class="testimonial-author">Budi</div>
+                    <div class="testimonial-role">Wiraswasta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FAQ</span>
+                <h2>Pertanyaan Umum</h2>
+                <p>Jawaban untuk pertanyaan yang sering diajukan tentang UangKuY</p>
+            </div>
+            
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <h3>Apakah UangKuY benar-benar gratis?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Ya, UangKuY 100% gratis selamanya. Tidak ada biaya langganan, tidak ada pembelian dalam aplikasi (in-app purchases), dan tidak ada fitur premium. Semua fitur bisa digunakan gratis.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah data saya aman?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sangat aman! Semua data disimpan secara lokal di perangkat Anda menggunakan database SQLite. Tidak ada data yang dikirim ke server kami. Aplikasi juga tidak memerlukan izin internet, sehingga tidak mungkin data Anda bocor.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah perlu koneksi internet?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Tidak. UangKuY bekerja 100% offline. Anda bisa mencatat transaksi kapan saja, di mana saja, tanpa koneksi internet. Cocok untuk digunakan di daerah dengan sinyal lemah atau saat hemat kuota.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara backup data?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Buka menu Pengaturan → Cadangkan Data → Ekspor ke CSV. File akan tersimpan di penyimpanan perangkat Anda dan bisa dibuka di Excel atau Google Sheets.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kategori apa saja yang tersedia?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Tersedia 9 kategori: Makanan, Transportasi, Belanja, Hiburan, Kesehatan, Pendidikan, Tagihan, Gaji, dan Lainnya. Setiap kategori memiliki icon dan warna yang berbeda untuk memudahkan identifikasi.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Siap Mencatat Keuangan dengan Lebih Teratur?</h2>
+                <p>Download UangKuY sekarang dan mulailah mengelola keuangan dengan mudah!</p>
+                <a href="#" class="btn-cta">
+                    <i class="fab fa-google-play"></i> Download di Google Play
+                </a>
+                <div class="cta-features">
+                    <span><i class="fas fa-check-circle"></i> 100% Gratis</span>
+                    <span><i class="fas fa-check-circle"></i> Offline</span>
+                    <span><i class="fas fa-check-circle"></i> Tanpa Iklan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                        <span class="logo-text">Uang<span>KuY</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Aplikasi catatan keuangan pribadi yang membantu Anda mengelola pemasukan dan pengeluaran dengan mudah. Dikembangkan dengan Flutter dan SQLite.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Fitur</h4>
+                    <ul>
+                        <li><a href="#fitur">Catat Transaksi</a></li>
+                        <li><a href="#kategori">9 Kategori</a></li>
+                        <li><a href="#statistik">3 Grafik Statistik</a></li>
+                        <li><a href="#fitur">Filter & Pencarian</a></li>
+                        <li><a href="#fitur">Backup CSV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#home">Tentang Kami</a></li>
+                        <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms-of-use.html">Syarat & Ketentuan</a></li>
+                        <li><a href="contact.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> uangkuy.app@gmail.com</li>
+                        <li><i class="fas fa-user"></i> Andreansyah</li>
+                        <li><i class="fas fa-code-branch"></i> Versi 1.0.0</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 UangKuY. All rights reserved. Developed with Flutter.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Back to top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('active');
+            });
+        });
+
+        // Mobile Menu
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.querySelector('.nav-menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.flexDirection = 'column';
+                menu.style.position = 'absolute';
+                menu.style.top = '80px';
+                menu.style.left = '0';
+                menu.style.right = '0';
+                menu.style.background = 'white';
+                menu.style.padding = '20px';
+                menu.style.boxShadow = 'var(--shadow-lg)';
+            }
+        });
+    </script>
+</body>
+</html>
