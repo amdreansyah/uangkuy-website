@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami — UangKuY</title>
+    <title>Hubungi Kami - UangKuY</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     
     <style>
         * {
@@ -42,7 +45,7 @@
         }
         
         body {
-            font-family: "Inter", sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--gray-50);
             color: var(--gray-900);
             line-height: 1.6;
@@ -54,7 +57,6 @@
             padding: 60px 24px;
         }
         
-        /* Card */
         .card {
             background: white;
             border-radius: 48px;
@@ -64,30 +66,33 @@
             text-align: center;
         }
         
-        /* Logo */
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
             margin-bottom: 30px;
         }
         
         .logo-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
-            border-radius: 16px;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 10px 20px -5px rgba(46, 125, 50, 0.3);
+            overflow: hidden;
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         
         .logo-text {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--gray-900);
         }
@@ -96,13 +101,11 @@
             color: var(--primary-700);
         }
         
-        /* Title */
         h1 {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--gray-900);
+            color: var(--primary-800);
             margin-bottom: 8px;
-            letter-spacing: -0.02em;
         }
         
         .subtitle {
@@ -110,7 +113,6 @@
             margin-bottom: 48px;
         }
         
-        /* Contact Items */
         .contact-item {
             background: var(--gray-50);
             padding: 24px;
@@ -121,14 +123,6 @@
             gap: 16px;
             text-align: left;
             border: 1px solid var(--gray-200);
-            transition: all 0.2s;
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-200);
-            background: white;
         }
         
         .contact-icon {
@@ -141,7 +135,6 @@
             justify-content: center;
             color: var(--primary-600);
             font-size: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
         
         .contact-detail {
@@ -159,72 +152,6 @@
             color: var(--gray-900);
         }
         
-        .contact-value a {
-            color: var(--primary-600);
-            text-decoration: none;
-        }
-        
-        .contact-value a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Divider */
-        .divider {
-            margin: 40px 0 24px;
-            position: relative;
-            text-align: center;
-        }
-        
-        .divider::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--gray-200);
-            z-index: 1;
-        }
-        
-        .divider span {
-            background: white;
-            padding: 0 20px;
-            color: var(--gray-500);
-            font-size: 0.875rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Social */
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 32px 0;
-        }
-        
-        .social-link {
-            width: 56px;
-            height: 56px;
-            background: var(--gray-50);
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-600);
-            font-size: 1.25rem;
-            border: 1px solid var(--gray-200);
-            transition: all 0.2s;
-        }
-        
-        .social-link:hover {
-            background: var(--primary-600);
-            color: white;
-            transform: translateY(-4px);
-            border-color: transparent;
-        }
-        
-        /* Button Back */
         .btn-back {
             display: inline-flex;
             align-items: center;
@@ -245,7 +172,6 @@
             transform: translateX(-4px);
         }
         
-        /* Footer */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -253,35 +179,30 @@
             font-size: 0.875rem;
         }
         
-        /* Responsive */
         @media (max-width: 480px) {
             .container { padding: 40px 20px; }
             .card { padding: 32px; border-radius: 32px; }
-            .contact-item { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <!-- Logo -->
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <div class="logo-icon">
+                    <img src="images/logo.png" alt="UangKuY Logo">
+                </div>
                 <span class="logo-text">Uang<span>KuY</span></span>
             </a>
             
-            <!-- Title -->
             <h1>Hubungi Kami</h1>
-            <p class="subtitle">Ada pertanyaan atau masukan? Kami siap membantu</p>
+            <p class="subtitle">Ada pertanyaan? Kami siap membantu</p>
             
-            <!-- Contact List -->
             <div class="contact-item">
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                 <div class="contact-detail">
                     <div class="contact-label">Email Utama</div>
-                    <div class="contact-value">
-                        <a href="mailto:uangkuy.app@gmail.com">uangkuy.app@gmail.com</a>
-                    </div>
+                    <div class="contact-value">uangkuy.app@gmail.com</div>
                 </div>
             </div>
             
@@ -301,29 +222,14 @@
                 </div>
             </div>
             
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-globe"></i></div>
-                <div class="contact-detail">
-                    <div class="contact-label">Website</div>
-                    <div class="contact-value">
-                        <a href="https://amdreansyah.github.io/uangkuy-website/" target="_blank">
-                            amdreansyah.github.io/uangkuy-website
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Back Button -->
             <a href="index.html" class="btn-back">
                 <i class="fas fa-arrow-left"></i> Kembali ke Beranda
             </a>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <p>© 2026 UangKuY. All rights reserved.</p>
         </div>
     </div>
 </body>
 </html>
-
