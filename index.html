@@ -26,10 +26,9 @@
     <meta property="twitter:image" content="images/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="images/favicon-32x32.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +42,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* ===== RESET & VARIABLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -55,7 +53,6 @@
         }
 
         :root {
-            /* Warna sesuai aplikasi */
             --primary-50: #e8f5e9;
             --primary-100: #c8e6c9;
             --primary-200: #a5d6a7;
@@ -106,56 +103,6 @@
             padding: 0 32px;
         }
 
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        .display-1 {
-            font-size: clamp(3rem, 8vw, 4.5rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-        }
-
-        .display-2 {
-            font-size: clamp(2.5rem, 6vw, 3.75rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .heading-1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-        }
-
-        .heading-2 {
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
-            font-weight: 600;
-        }
-
-        .heading-3 {
-            font-size: clamp(1.25rem, 3vw, 1.875rem);
-            font-weight: 600;
-        }
-
-        .body-large {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-        }
-
-        .body-regular {
-            font-size: 1rem;
-            color: var(--gray-600);
-        }
-
-        .body-small {
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
-
-        /* ===== BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -202,7 +149,7 @@
             font-size: 1.125rem;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* Navigation */
         .navbar {
             position: fixed;
             top: 0;
@@ -232,14 +179,18 @@
         .logo-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+            background: transparent;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.25rem;
-            box-shadow: var(--shadow-primary);
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .logo-text {
@@ -296,7 +247,7 @@
             cursor: pointer;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* Hero Section */
         .hero {
             padding: 160px 0 80px;
             background: linear-gradient(135deg, #fff, var(--gray-50));
@@ -586,7 +537,7 @@
             50% { transform: translateY(-15px); }
         }
 
-        /* ===== SECTION STYLES ===== */
+        /* Section Styles */
         .section {
             padding: 100px 0;
         }
@@ -619,7 +570,7 @@
             color: var(--gray-600);
         }
 
-        /* ===== FEATURES ===== */
+        /* Features */
         .features {
             background: white;
         }
@@ -712,7 +663,7 @@
             font-size: 0.875rem;
         }
 
-        /* ===== CATEGORIES ===== */
+        /* Categories */
         .categories {
             background: var(--gray-50);
         }
@@ -763,7 +714,7 @@
             font-size: 0.875rem;
         }
 
-        /* ===== STATISTICS ===== */
+        /* Statistics */
         .statistics {
             background: white;
         }
@@ -835,7 +786,7 @@
             color: var(--primary-800);
         }
 
-        /* ===== HOW IT WORKS ===== */
+        /* How It Works */
         .how-it-works {
             background: var(--gray-50);
         }
@@ -887,7 +838,7 @@
             color: var(--gray-600);
         }
 
-        /* ===== SCREENSHOTS ===== */
+        /* Screenshots */
         .screenshots {
             background: linear-gradient(135deg, var(--primary-900), var(--primary-700));
             color: white;
@@ -933,48 +884,7 @@
             opacity: 0.9;
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            background: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: var(--gray-50);
-            padding: 40px 32px;
-            border-radius: 32px;
-            border: 1px solid var(--gray-200);
-        }
-
-        .testimonial-quote {
-            color: var(--primary-600);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-text {
-            color: var(--gray-700);
-            font-size: 1rem;
-            margin-bottom: 24px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--gray-900);
-        }
-
-        .testimonial-role {
-            color: var(--gray-500);
-            font-size: 0.875rem;
-        }
-
-        /* ===== FAQ ===== */
+        /* FAQ */
         .faq {
             background: var(--gray-50);
         }
@@ -1029,7 +939,7 @@
             display: block;
         }
 
-        /* ===== CTA ===== */
+        /* CTA */
         .cta {
             padding: 100px 0;
             background: white;
@@ -1088,7 +998,7 @@
             color: var(--success);
         }
 
-        /* ===== FOOTER ===== */
+        /* Footer */
         .footer {
             background: var(--gray-900);
             color: white;
@@ -1110,7 +1020,7 @@
         }
 
         .footer-logo .logo-icon {
-            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            background: transparent;
         }
 
         .footer-logo .logo-text {
@@ -1177,7 +1087,7 @@
             color: var(--gray-500);
         }
 
-        /* ===== BACK TO TOP ===== */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 40px;
@@ -1210,12 +1120,11 @@
             transform: translateY(-4px);
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* Responsive */
         @media (max-width: 1200px) {
             .features-grid,
             .categories-grid,
             .charts-grid,
-            .testimonials-grid,
             .screenshots-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1266,7 +1175,6 @@
             .features-grid,
             .categories-grid,
             .charts-grid,
-            .testimonials-grid,
             .screenshots-grid,
             .steps-grid {
                 grid-template-columns: 1fr;
@@ -1294,7 +1202,7 @@
         <div class="container navbar-content">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <i class="fas fa-wallet"></i>
+                    <img src="images/logo.png" alt="UangKuY Logo">
                 </div>
                 <span class="logo-text">Uang<span>KuY</span></span>
             </a>
@@ -1693,64 +1601,30 @@
             <div class="screenshots-grid">
                 <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="0">
                     <div class="screenshot-frame">
-                        <img src="images/beranda.jpg" alt="Dashboard UangKuY">
+                        <img src="images/beranda.jpg" alt="Halaman Beranda" onerror="this.src='https://via.placeholder.com/250x500/2E7D32/ffffff?text=Beranda'">
                     </div>
                     <p>Halaman Beranda</p>
                 </div>
                 
                 <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="screenshot-frame">
-                        <img src="images/transaksi.jpg" alt="Daftar Transaksi">
+                        <img src="images/transaksi.jpg" alt="Daftar Transaksi" onerror="this.src='https://via.placeholder.com/250x500/388E3C/ffffff?text=Transaksi'">
                     </div>
                     <p>Daftar Transaksi</p>
                 </div>
                 
                 <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="200">
                     <div class="screenshot-frame">
-                        <img src="images/tambah.jpg" alt="Tambah Transaksi">
+                        <img src="images/tambah.jpg" alt="Tambah Transaksi" onerror="this.src='https://via.placeholder.com/250x500/4CAF50/ffffff?text=Tambah'">
                     </div>
                     <p>Tambah Transaksi</p>
                 </div>
                 
                 <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="300">
                     <div class="screenshot-frame">
-                        <img src="images/statistik.jpg" alt="Halaman Statistik">
+                        <img src="images/statistik.jpg" alt="Halaman Statistik" onerror="this.src='https://via.placeholder.com/250x500/1B5E20/ffffff?text=Statistik'">
                     </div>
                     <p>Halaman Statistik</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">TESTIMONIAL</span>
-                <h2>Apa Kata Pengguna UangKuY</h2>
-                <p>Pengalaman nyata dari pengguna yang sudah merasakan kemudahan mencatat keuangan</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-                    <p class="testimonial-text">"Aplikasi ini sangat membantu saya mengelola keuangan. UI nya enak dipandang dan mudah digunakan."</p>
-                    <div class="testimonial-author">Andrean</div>
-                    <div class="testimonial-role">Mahasiswa</div>
-                </div>
-                
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-                    <p class="testimonial-text">"Fitur backup ke CSV sangat membantu. Saya bisa menganalisis pengeluaran di Excel dengan mudah."</p>
-                    <div class="testimonial-author">Sarah</div>
-                    <div class="testimonial-role">Karyawan</div>
-                </div>
-                
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
-                    <p class="testimonial-text">"Akhirnya nemu aplikasi catatan keuangan yang sederhana dan ga ribet. Dark mode-nya enak buat malam hari."</p>
-                    <div class="testimonial-author">Budi</div>
-                    <div class="testimonial-role">Wiraswasta</div>
                 </div>
             </div>
         </div>
@@ -1843,7 +1717,9 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="logo-icon">
+                            <img src="images/logo.png" alt="UangKuY Logo">
+                        </div>
                         <span class="logo-text">Uang<span>KuY</span></span>
                     </div>
                     <p class="footer-description">
