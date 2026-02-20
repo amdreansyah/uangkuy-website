@@ -2,36 +2,326 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kebijakan Privasi - UangKuY</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Kebijakan privasi aplikasi UangKuY. 100% offline, data hanya tersimpan di perangkat Anda.">
+    
+    <!-- Font & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { font-family: Arial; max-width: 800px; margin: 50px auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #2E7D32; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2e7d32;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: #2e7d32;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* Card */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Section */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+        
+        .section h2 i {
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        
+        .section p {
+            color: #475569;
+            margin-bottom: 10px;
+        }
+        
+        .section ul {
+            margin: 10px 0 10px 20px;
+            color: #475569;
+        }
+        
+        .section li {
+            margin-bottom: 5px;
+        }
+        
+        /* Highlight */
+        .highlight {
+            background: #e8f5e9;
+            border-left: 4px solid #2e7d32;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .highlight p {
+            margin: 0;
+            color: #1b5e20;
+            font-weight: 500;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        /* Button */
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .btn-back:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            .card { padding: 25px; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
-    <h1>Kebijakan Privasi UangKuY</h1>
-    <p><strong>Terakhir diperbarui:</strong> 20 Februari 2026</p>
-    
-    <h2>1. Data yang Dikumpulkan</h2>
-    <p>UangKuY TIDAK mengumpulkan data pribadi pengguna. Semua data disimpan secara lokal di perangkat Anda.</p>
-    
-    <h2>2. Data yang Disimpan</h2>
-    <ul>
-        <li>Nama pengguna (opsional, hanya di perangkat)</li>
-        <li>Transaksi keuangan (pemasukan & pengeluaran)</li>
-        <li>Preferensi tema (dark/light mode)</li>
-    </ul>
-    
-    <h2>3. Izin Aplikasi</h2>
-    <p>Aplikasi tidak memerlukan izin internet, kamera, lokasi, atau kontak.</p>
-    
-    <h2>4. Keamanan</h2>
-    <p>Data Anda aman karena tersimpan di perangkat Anda sendiri. Tidak ada yang bisa mengaksesnya.</p>
-    
-    <h2>5. Kontak</h2>
-    <p>Email: uangkuy.app@gmail.com</p>
-    <p>Developer: Andreansyah</p>
-    
-    <p><a href="index.html">← Kembali ke Beranda</a></p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <span>UangKuY</span>
+            </a>
+            <h1>Kebijakan Privasi</h1>
+            <div class="date">Terakhir diperbarui: 20 Februari 2026</div>
+        </div>
+        
+        <!-- Content Card -->
+        <div class="card">
+            <!-- Highlight: Komitmen Utama -->
+            <div class="highlight">
+                <p><i class="fas fa-shield-alt" style="margin-right: 8px;"></i> <strong>100% OFFLINE</strong> — Semua data hanya tersimpan di perangkat Anda. Tidak ada data yang dikirim ke server.</p>
+            </div>
+            
+            <!-- Section 1: Data yang Disimpan -->
+            <div class="section">
+                <h2><i class="fas fa-database"></i> Data yang Disimpan</h2>
+                <p>Aplikasi UangKuY menyimpan data berikut secara lokal di perangkat Anda:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jenis Data</th>
+                            <th>Tujuan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nama Pengguna</strong></td>
+                            <td>Ditampilkan di profil (opsional)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transaksi Keuangan</strong></td>
+                            <td>Pencatatan pemasukan & pengeluaran</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Preferensi Tema</strong></td>
+                            <td>Menyimpan pilihan dark/light mode</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><span class="badge">CATATAN</span> Kami <strong>TIDAK</strong> mengumpulkan email, nomor HP, lokasi, kontak, atau data pribadi lainnya.</p>
+            </div>
+            
+            <!-- Section 2: Izin Aplikasi -->
+            <div class="section">
+                <h2><i class="fas fa-mobile-alt"></i> Izin Aplikasi</h2>
+                <p>UangKuY tidak memerlukan izin khusus:</p>
+                <ul>
+                    <li>❌ Tidak perlu izin internet</li>
+                    <li>❌ Tidak perlu izin kamera</li>
+                    <li>❌ Tidak perlu izin lokasi</li>
+                    <li>❌ Tidak perlu izin kontak</li>
+                    <li>✅ Hanya penyimpanan internal</li>
+                </ul>
+            </div>
+            
+            <!-- Section 3: Keamanan -->
+            <div class="section">
+                <h2><i class="fas fa-lock"></i> Keamanan Data</h2>
+                <ul>
+                    <li>Data Anda aman karena tersimpan di perangkat Anda sendiri</li>
+                    <li>Tidak ada data yang dikirim ke server manapun</li>
+                    <li>Bahkan kami sebagai developer tidak bisa mengakses data Anda</li>
+                    <li>Jika aplikasi dihapus, semua data ikut terhapus</li>
+                </ul>
+            </div>
+            
+            <!-- Section 4: Backup -->
+            <div class="section">
+                <h2><i class="fas fa-file-export"></i> Backup Data</h2>
+                <p>Fitur backup CSV memungkinkan Anda mengekspor data ke file yang bisa dibuka di Excel atau Google Sheets. File ini disimpan di penyimpanan eksternal perangkat Anda dan hanya bisa diakses oleh Anda.</p>
+            </div>
+            
+            <!-- Section 5: Anak-anak -->
+            <div class="section">
+                <h2><i class="fas fa-child"></i> Privasi Anak-anak</h2>
+                <p>Aplikasi ini tidak ditujukan untuk anak-anak di bawah 13 tahun. Kami tidak mengumpulkan data dari siapapun, termasuk anak-anak.</p>
+            </div>
+            
+            <!-- Section 6: Perubahan -->
+            <div class="section">
+                <h2><i class="fas fa-edit"></i> Perubahan Kebijakan</h2>
+                <p>Jika ada perubahan kebijakan privasi, akan diperbarui di halaman ini dengan tanggal revisi terbaru.</p>
+            </div>
+            
+            <!-- Section 7: Kontak -->
+            <div class="section">
+                <h2><i class="fas fa-envelope"></i> Hubungi Kami</h2>
+                <p>Jika ada pertanyaan tentang kebijakan privasi ini:</p>
+                <p style="background: #f8fafc; padding: 15px; border-radius: 10px;">
+                    <i class="fas fa-envelope" style="color: #2e7d32; margin-right: 10px;"></i> 
+                    <strong>uangkuy.app@gmail.com</strong>
+                </p>
+                <p style="margin-top: 5px;">Developer: Andreansyah</p>
+            </div>
+            
+            <!-- Ringkasan -->
+            <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <p style="font-weight: 600; color: #2e7d32; margin-bottom: 10px;">📌 Ringkasan:</p>
+                <p>✓ 100% offline & gratis<br>✓ Data hanya di HP Anda<br>✓ Tanpa izin internet<br>✓ Tidak ada pengumpulan data</p>
+            </div>
+            
+            <!-- Tombol Kembali -->
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 UangKuY. Dikembangkan oleh Andreansyah.</p>
+            <p style="margin-top: 5px;">Versi 1.0.0</p>
+        </div>
+    </div>
 </body>
 </html>
