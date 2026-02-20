@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebijakan Privasi — UangKuY</title>
+    <title>Kebijakan Privasi - UangKuY</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     
     <style>
         * {
@@ -39,10 +42,11 @@
             --gray-700: #374151;
             --gray-800: #1f2937;
             --gray-900: #111827;
+            --success: #10b981;
         }
         
         body {
-            font-family: "Inter", sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--gray-50);
             color: var(--gray-900);
             line-height: 1.7;
@@ -54,7 +58,6 @@
             padding: 60px 24px;
         }
         
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -63,22 +66,26 @@
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
             margin-bottom: 30px;
         }
         
         .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+            width: 44px;
+            height: 44px;
+            background: transparent;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.25rem;
-            box-shadow: 0 10px 20px -5px rgba(46, 125, 50, 0.3);
+            overflow: hidden;
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         
         .logo-text {
@@ -94,9 +101,8 @@
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--gray-900);
+            color: var(--primary-800);
             margin-bottom: 12px;
-            letter-spacing: -0.02em;
         }
         
         .date {
@@ -104,7 +110,6 @@
             font-size: 0.95rem;
         }
         
-        /* Card */
         .card {
             background: white;
             border-radius: 40px;
@@ -113,7 +118,6 @@
             border: 1px solid var(--gray-200);
         }
         
-        /* Section */
         .section {
             margin-bottom: 40px;
         }
@@ -135,71 +139,32 @@
             color: var(--primary-600);
         }
         
-        .section p {
+        .section p, .section ul {
             color: var(--gray-600);
-            margin-bottom: 16px;
         }
         
         .section ul {
             margin: 16px 0 16px 24px;
-            color: var(--gray-600);
         }
         
         .section li {
             margin-bottom: 8px;
         }
         
-        /* Highlight */
         .highlight {
             background: linear-gradient(135deg, var(--primary-50), white);
             border-left: 4px solid var(--primary-600);
             padding: 24px;
             border-radius: 24px;
             margin: 32px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
         }
         
         .highlight p {
-            margin: 0;
             color: var(--primary-900);
             font-weight: 500;
+            margin: 0;
         }
         
-        .highlight i {
-            color: var(--primary-600);
-            margin-right: 8px;
-        }
-        
-        /* Table */
-        .table-wrapper {
-            overflow-x: auto;
-            margin: 24px 0;
-            border-radius: 20px;
-            border: 1px solid var(--gray-200);
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        
-        th {
-            background: var(--primary-50);
-            color: var(--primary-800);
-            padding: 16px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        
-        td {
-            padding: 16px;
-            border-top: 1px solid var(--gray-200);
-            color: var(--gray-600);
-        }
-        
-        /* Badge */
         .badge {
             display: inline-block;
             background: var(--primary-100);
@@ -210,41 +175,6 @@
             font-weight: 600;
         }
         
-        /* Contact */
-        .contact-box {
-            background: var(--gray-50);
-            padding: 24px;
-            border-radius: 24px;
-            margin-top: 20px;
-            border: 1px solid var(--gray-200);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-600);
-            font-size: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-        
-        /* Summary */
         .summary {
             background: var(--primary-50);
             padding: 24px;
@@ -264,7 +194,6 @@
             color: var(--success);
         }
         
-        /* Button */
         .btn-back {
             display: inline-flex;
             align-items: center;
@@ -285,7 +214,6 @@
             transform: translateX(-4px);
         }
         
-        /* Footer */
         .footer {
             text-align: center;
             margin-top: 60px;
@@ -293,7 +221,6 @@
             font-size: 0.95rem;
         }
         
-        /* Responsive */
         @media (max-width: 640px) {
             .container { padding: 40px 20px; }
             .card { padding: 32px; border-radius: 32px; }
@@ -303,69 +230,43 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <div class="logo-icon">
+                    <img src="images/logo.png" alt="UangKuY Logo">
+                </div>
                 <span class="logo-text">Uang<span>KuY</span></span>
             </a>
             <h1>Kebijakan Privasi</h1>
             <div class="date">Terakhir diperbarui: 20 Februari 2026</div>
         </div>
         
-        <!-- Content -->
         <div class="card">
-            <!-- Highlight -->
             <div class="highlight">
                 <p><i class="fas fa-shield-alt"></i> <strong>100% OFFLINE</strong> — Semua data hanya tersimpan di perangkat Anda. Tidak ada data yang dikirim ke server.</p>
             </div>
             
-            <!-- Section 1 -->
             <div class="section">
                 <h2><i class="fas fa-database"></i> Data yang Disimpan</h2>
                 <p>Aplikasi UangKuY menyimpan data berikut secara lokal di perangkat Anda:</p>
-                
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Jenis Data</th>
-                                <th>Tujuan Penggunaan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Nama Pengguna</strong></td>
-                                <td>Ditampilkan di halaman profil (opsional)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Transaksi Keuangan</strong></td>
-                                <td>Pencatatan pemasukan dan pengeluaran</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Preferensi Tema</strong></td>
-                                <td>Menyimpan pilihan dark/light mode</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
+                <ul>
+                    <li><strong>Nama Pengguna</strong> - Ditampilkan di profil (opsional)</li>
+                    <li><strong>Transaksi Keuangan</strong> - Pencatatan pemasukan dan pengeluaran</li>
+                    <li><strong>Preferensi Tema</strong> - Dark/light mode</li>
+                </ul>
                 <p><span class="badge">CATATAN</span> Kami <strong>TIDAK</strong> mengumpulkan email, nomor HP, lokasi, kontak, foto, atau data sensitif lainnya.</p>
             </div>
             
-            <!-- Section 2 -->
             <div class="section">
                 <h2><i class="fas fa-mobile-alt"></i> Izin Aplikasi</h2>
-                <p>UangKuY tidak memerlukan izin khusus:</p>
                 <ul>
-                    <li><i class="fas fa-times" style="color: var(--error); margin-right: 8px;"></i> Tidak perlu izin internet</li>
-                    <li><i class="fas fa-times" style="color: var(--error); margin-right: 8px;"></i> Tidak perlu izin kamera</li>
-                    <li><i class="fas fa-times" style="color: var(--error); margin-right: 8px;"></i> Tidak perlu izin lokasi</li>
-                    <li><i class="fas fa-check" style="color: var(--success); margin-right: 8px;"></i> Hanya penyimpanan internal</li>
+                    <li>❌ Tidak perlu izin internet</li>
+                    <li>❌ Tidak perlu izin kamera</li>
+                    <li>❌ Tidak perlu izin lokasi</li>
+                    <li>✅ Hanya penyimpanan internal</li>
                 </ul>
             </div>
             
-            <!-- Section 3 -->
             <div class="section">
                 <h2><i class="fas fa-lock"></i> Keamanan Data</h2>
                 <ul>
@@ -376,42 +277,23 @@
                 </ul>
             </div>
             
-            <!-- Section 4 -->
             <div class="section">
                 <h2><i class="fas fa-file-export"></i> Backup Data</h2>
                 <p>Fitur backup CSV memungkinkan Anda mengekspor data ke file yang bisa dibuka di Excel atau Google Sheets. File ini disimpan di penyimpanan eksternal perangkat Anda dan hanya bisa diakses oleh Anda.</p>
             </div>
             
-            <!-- Section 5 -->
             <div class="section">
                 <h2><i class="fas fa-child"></i> Privasi Anak-anak</h2>
                 <p>Aplikasi ini tidak ditujukan untuk anak-anak di bawah 13 tahun. Kami tidak mengumpulkan data dari siapapun, termasuk anak-anak.</p>
             </div>
             
-            <!-- Section 6 -->
-            <div class="section">
-                <h2><i class="fas fa-edit"></i> Perubahan Kebijakan</h2>
-                <p>Jika ada perubahan kebijakan privasi, akan diperbarui di halaman ini dengan tanggal revisi terbaru.</p>
-            </div>
-            
-            <!-- Section 7 -->
             <div class="section">
                 <h2><i class="fas fa-envelope"></i> Hubungi Kami</h2>
-                <p>Jika ada pertanyaan tentang kebijakan privasi ini, silakan hubungi:</p>
-                
-                <div class="contact-box">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div><strong>Email</strong><br>uangkuy.app@gmail.com</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-user"></i></div>
-                        <div><strong>Developer</strong><br>Andreansyah</div>
-                    </div>
-                </div>
+                <p>Jika ada pertanyaan, silakan hubungi:</p>
+                <p><strong>Email:</strong> uangkuy.app@gmail.com</p>
+                <p><strong>Developer:</strong> Andreansyah</p>
             </div>
             
-            <!-- Summary -->
             <div class="summary">
                 <p><i class="fas fa-check-circle"></i> 100% offline & gratis</p>
                 <p><i class="fas fa-check-circle"></i> Data hanya di perangkat Anda</p>
@@ -419,7 +301,6 @@
                 <p><i class="fas fa-check-circle"></i> Tidak ada pengumpulan data</p>
             </div>
             
-            <!-- Back Button -->
             <div style="text-align: center;">
                 <a href="index.html" class="btn-back">
                     <i class="fas fa-arrow-left"></i> Kembali ke Beranda
@@ -427,7 +308,6 @@
             </div>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <p>© 2026 UangKuY. Versi 1.0.0</p>
         </div>
