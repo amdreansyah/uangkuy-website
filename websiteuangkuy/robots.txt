@@ -1,9 +1,0 @@
-# Robots.txt for UangKuY
-User-agent: *
-Allow: /
-
-Sitemap: https://www.uangkuy.com/sitemap.xml
-
-# Disallow admin pages
-Disallow: /admin/
-Disallow: /private/
