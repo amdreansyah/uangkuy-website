@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO -->
-    <title>UangKuY - Aplikasi Catatan Keuangan Harian 100% Offline</title>
-    <meta name="description" content="UangKuY adalah aplikasi catatan keuangan pribadi 100% offline. Catat pemasukan dan pengeluaran dengan mudah, gratis, tanpa iklan.">
-    <meta name="keywords" content="aplikasi keuangan, catatan keuangan, pemasukan pengeluaran, budget tracker, uangkuy">
+    <title>UangKuY - Aplikasi Catatan Keuangan Harian</title>
+    <meta name="description" content="UangKuY adalah aplikasi catatan keuangan pribadi 100% offline. Catat pemasukan dan pengeluaran dengan mudah, gratis.">
+    <meta name="keywords" content="aplikasi keuangan, catatan keuangan, pemasukan pengeluaran, uangkuy">
     <meta name="author" content="Andreansyah">
     
     <!-- Open Graph -->
     <meta property="og:title" content="UangKuY - Catat Keuangan dengan Mudah">
-    <meta property="og:description" content="Aplikasi pencatatan keuangan pribadi 100% offline. Gratis selamanya!">
+    <meta property="og:description" content="Aplikasi pencatatan keuangan pribadi 100% offline.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://amdreansyah.github.io/uangkuy-website/">
-    <meta property="og:image" content="https://amdreansyah.github.io/uangkuy-website/images/og-image.jpg">
+    <meta property="og:image" content="images/og-image.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/logo.png">
     
-    <!-- Fonts & Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,24 +39,11 @@
             --primary-light: #4CAF50;
             --primary-dark: #1B5E20;
             --primary-soft: #E8F5E9;
-            --success: #388E3C;
-            --error: #D32F2F;
-            --warning: #FFA000;
             --background: #F5F7FA;
             --surface: #FFFFFF;
             --text-primary: #1E293B;
             --text-secondary: #64748B;
             --border: #E2E8F0;
-            
-            --food: #F97316;
-            --transport: #3B82F6;
-            --shopping: #A855F7;
-            --entertainment: #EF4444;
-            --health: #22C55E;
-            --education: #8B5A2B;
-            --bills: #14B8A6;
-            --salary: #22C55E;
-            --other: #6B7280;
         }
 
         body {
@@ -74,8 +61,7 @@
 
         /* Navigation */
         .navbar {
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(10px);
+            background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
@@ -107,7 +93,6 @@
             justify-content: center;
             color: white;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(46,125,50,0.2);
         }
 
         .logo-text {
@@ -131,7 +116,6 @@
             text-decoration: none;
             color: var(--text-secondary);
             font-weight: 500;
-            font-size: 0.95rem;
         }
 
         .nav-menu a:hover {
@@ -143,17 +127,16 @@
             color: white !important;
             padding: 10px 20px;
             border-radius: 50px;
-            font-weight: 600 !important;
+            font-weight: 600;
         }
 
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
-            color: var(--text-primary);
             cursor: pointer;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             padding: 60px 0;
             background: linear-gradient(135deg, #fff, var(--background));
@@ -219,7 +202,6 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(46,125,50,0.3);
         }
 
         .btn-outline {
@@ -248,22 +230,13 @@
             font-size: 0.9rem;
         }
 
-        .hero-image {
-            text-align: center;
-        }
-
         .hero-image img {
             max-width: 300px;
             border-radius: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        /* Features */
-        .features {
-            padding: 80px 0;
-            background: white;
-        }
-
+        /* Section Header */
         .section-header {
             text-align: center;
             max-width: 700px;
@@ -290,6 +263,12 @@
             color: var(--text-secondary);
         }
 
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -306,7 +285,6 @@
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(46,125,50,0.1);
-            border-color: var(--primary-light);
         }
 
         .feature-icon {
@@ -441,12 +419,6 @@
             margin-bottom: 20px;
         }
 
-        .footer-social a {
-            color: #94A3B8;
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-
         .footer-col h4 {
             margin-bottom: 20px;
             color: white;
@@ -564,10 +536,10 @@
                 
                 <div class="hero-cta">
                     <a href="#" class="btn btn-primary">
-                        <i class="fab fa-google-play"></i> Download di Play Store
+                        <i class="fab fa-google-play"></i> Download
                     </a>
                     <a href="#" class="btn btn-outline">
-                        <i class="fas fa-play"></i> Lihat Demo
+                        <i class="fas fa-play"></i> Demo
                     </a>
                 </div>
                 
@@ -578,7 +550,7 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">3</span>
-                        <span class="stat-label">Jenis Grafik</span>
+                        <span class="stat-label">Grafik</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
@@ -588,8 +560,8 @@
             </div>
             
             <div class="hero-image">
-                <!-- GANTI DENGAN GAMBAR ASLI ANDA -->
-                <img src="images/beranda.jpg" alt="UangKuY App" onerror="this.src='https://via.placeholder.com/300x600/2E7D32/ffffff?text=UangKuY'">
+                <!-- GANTI: images/beranda.jpg -->
+                <img src="images/beranda.jpg" alt="UangKuY App">
             </div>
         </div>
     </section>
@@ -672,23 +644,26 @@
             
             <div class="screenshots-grid">
                 <div class="screenshot-item">
-                    <!-- GANTI DENGAN GAMBAR ASLI ANDA -->
-                    <img src="images/beranda.jpg" alt="Halaman Beranda" onerror="this.src='https://via.placeholder.com/220x440/2E7D32/ffffff?text=Beranda'">
+                    <!-- GANTI: images/beranda.jpg -->
+                    <img src="images/beranda.jpg" alt="Halaman Beranda">
                     <p>Halaman Beranda</p>
                 </div>
                 
                 <div class="screenshot-item">
-                    <img src="images/transaksi.jpg" alt="Daftar Transaksi" onerror="this.src='https://via.placeholder.com/220x440/388E3C/ffffff?text=Transaksi'">
+                    <!-- GANTI: images/transaksi.jpg -->
+                    <img src="images/transaksi.jpg" alt="Daftar Transaksi">
                     <p>Daftar Transaksi</p>
                 </div>
                 
                 <div class="screenshot-item">
-                    <img src="images/tambah.jpg" alt="Tambah Transaksi" onerror="this.src='https://via.placeholder.com/220x440/4CAF50/ffffff?text=Tambah'">
+                    <!-- GANTI: images/tambah.jpg -->
+                    <img src="images/tambah.jpg" alt="Tambah Transaksi">
                     <p>Tambah Transaksi</p>
                 </div>
                 
                 <div class="screenshot-item">
-                    <img src="images/statistik.jpg" alt="Halaman Statistik" onerror="this.src='https://via.placeholder.com/220x440/1B5E20/ffffff?text=Statistik'">
+                    <!-- GANTI: images/statistik.jpg -->
+                    <img src="images/statistik.jpg" alt="Halaman Statistik">
                     <p>Halaman Statistik</p>
                 </div>
             </div>
