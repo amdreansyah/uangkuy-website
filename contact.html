@@ -123,6 +123,14 @@
             gap: 16px;
             text-align: left;
             border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(46, 125, 50, 0.1);
+            border-color: var(--primary-300);
         }
         
         .contact-icon {
@@ -135,6 +143,12 @@
             justify-content: center;
             color: var(--primary-600);
             font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover .contact-icon {
+            background: var(--primary-50);
+            color: var(--primary-700);
         }
         
         .contact-detail {
@@ -150,6 +164,13 @@
         .contact-value {
             font-weight: 600;
             color: var(--gray-900);
+        }
+        
+        /* Style untuk link email */
+        .email-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         
         .btn-back {
@@ -198,13 +219,16 @@
             <h1>Hubungi Kami</h1>
             <p class="subtitle">Ada pertanyaan? Kami siap membantu</p>
             
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                <div class="contact-detail">
-                    <div class="contact-label">Email Utama</div>
-                    <div class="contact-value">uangkuy.app@gmail.com</div>
+            <!-- Email dengan mailto link -->
+            <a href="mailto:uangkuy.app@gmail.com?subject=Halo%20UangKuY&body=Saya%20ingin%20bertanya%20tentang..." class="email-link">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <div class="contact-label">Email Utama</div>
+                        <div class="contact-value">uangkuy.app@gmail.com</div>
+                    </div>
                 </div>
-            </div>
+            </a>
             
             <div class="contact-item">
                 <div class="contact-icon"><i class="fas fa-user"></i></div>
@@ -233,4 +257,3 @@
     </div>
 </body>
 </html>
-
